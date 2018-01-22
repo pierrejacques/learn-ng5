@@ -1,7 +1,7 @@
 export class Article {
   title: string;
   link: string;
-  votes: numer;
+  votes: number;
 
   constructor(title: string, link: string, votes?: number) {
     this.title = title;
@@ -22,7 +22,7 @@ export class Article {
   domain(): string {
     try {
       const domainAddPath: string = this.link.split('//')[1];
-      return domainAndPath.split('/')[0];
+      return domainAddPath.split('/')[0];
     } catch (err) {
       return null;
     }
